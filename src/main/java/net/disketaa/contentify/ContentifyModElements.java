@@ -46,6 +46,16 @@ public class ContentifyModElements {
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 
 	public ContentifyModElements() {
+		sounds.put(new ResourceLocation("contentify", "item.armor.equip_bone"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "item.armor.equip_bone")));
+		sounds.put(new ResourceLocation("contentify", "item.armor.hit.bone"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "item.armor.hit.bone")));
+		sounds.put(new ResourceLocation("contentify", "item.bonemeal.use"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "item.bonemeal.use")));
+		sounds.put(new ResourceLocation("contentify", "item.withered.bonemeal.use"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "item.withered.bonemeal.use")));
+		sounds.put(new ResourceLocation("contentify", "block.paper.button.destroy"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "block.paper.button.destroy")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("contentify").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

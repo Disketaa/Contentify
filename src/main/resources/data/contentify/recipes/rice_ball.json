@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###"
+    ],
+    "key": {
+        "#": {
+            "tag": "contentify:rice"
+        }
+    },
+    "result": {
+        "item": "contentify:rice_ball"
+    }
+}

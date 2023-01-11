@@ -4,11 +4,15 @@ license="Academic Free License v3.0"
 
 [[mods]]
 modId="contentify"
-version="1.0.0"
+version="1.10"
 displayName="Contentify"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-authors="twili, MCreator"
+credits="Disketaa"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/contentify"
+logoFile="logo.png"
+authors="AnimeH"
+description='''
+Expand your true vanilla gameplay without nothing extra and outrageous! 🙌
+'''
 
 [[dependencies.contentify]]
     modId="minecraft"
@@ -19,4 +23,10 @@ authors="twili, MCreator"
 
 
 
+[[dependencies.contentify]]
+    modId="allmods"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

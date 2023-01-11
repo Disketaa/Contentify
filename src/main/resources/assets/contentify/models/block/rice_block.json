@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "contentify:blocks/rice_block_top",
+    "up": "contentify:blocks/rice_block_top",
+    "north": "contentify:blocks/rice_block_side",
+    "east": "contentify:blocks/rice_block_side",
+    "south": "contentify:blocks/rice_block_side",
+    "west": "contentify:blocks/rice_block_side",
+    "particle": "contentify:blocks/rice_block_top"
+  }
+}

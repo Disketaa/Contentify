@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "withered_bone_meal",
+  "ingredients": [
+    {
+      "tag": "forge:bones/wither"
+    }
+  ],
+  "result": {
+    "item": "contentify:withered_bone_meal",
+    "count": 3
+  }
+}

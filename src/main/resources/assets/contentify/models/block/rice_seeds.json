@@ -1,0 +1,7 @@
+{
+  "parent": "contentify:block/crop",
+  "textures": {
+    "crop": "contentify:blocks/rice_roots",
+    "particle": "contentify:blocks/rice_roots"
+  }
+}

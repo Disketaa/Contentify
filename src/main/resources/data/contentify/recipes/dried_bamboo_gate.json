@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "contentify:dried_bamboo"
+    },
+    "W": {
+      "item": "contentify:dried_bamboo_block"
+    }
+  },
+  "result": {
+    "item": "contentify:dried_bamboo_gate"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "contentify:blocks/withered_flower",
+    "particle": "contentify:blocks/withered_flower"
+  }
+}

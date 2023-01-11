@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "contentify:withered_bone",
+    "#forge:wither_bones"
+  ]
+}

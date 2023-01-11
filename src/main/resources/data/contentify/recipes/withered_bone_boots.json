@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:bones/wither"
+    }
+  },
+  "result": {
+    "item": "contentify:withered_bone_boots"
+  }
+}

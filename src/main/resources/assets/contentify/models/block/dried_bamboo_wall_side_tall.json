@@ -1,0 +1,8 @@
+{
+  "parent": "contentify:block/template_wall_side_tall",
+  "textures": {
+    "edge": "contentify:blocks/paper_wall_top",
+    "pane": "contentify:blocks/dried_bamboo_wall",
+    "particle": "contentify:blocks/dried_bamboo_wall"
+  }
+}

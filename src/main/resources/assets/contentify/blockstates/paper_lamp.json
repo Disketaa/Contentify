@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "contentify:block/paper_lamp"
+    },
+    "facing=east": {
+      "model": "contentify:block/paper_lamp",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "contentify:block/paper_lamp",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "contentify:block/paper_lamp",
+      "y": 270
+    }
+  }
+}

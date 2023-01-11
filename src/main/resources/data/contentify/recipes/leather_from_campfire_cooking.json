@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "experience": 2,
+  "cookingtime": 800,
+  "ingredient": {
+    "item": "contentify:flesh"
+  },
+  "result": "minecraft:leather"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 2,
+  "cookingtime": 400,
+  "ingredient": {
+    "item": "contentify:flesh"
+  },
+  "result": "minecraft:leather"
+}

@@ -1,0 +1,22 @@
+{
+  "parent": "block/thin_block",
+  "textures": {
+    "top": "contentify:blocks/dried_bamboo_block_top",
+    "texture": "contentify:blocks/dried_bamboo_trapdoor",
+    "particle": "contentify:blocks/dried_bamboo_trapdoor"
+  },
+  "elements": [
+    {
+      "from": [0, 13, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 3], "texture": "#top", "cullface": "north"},
+        "east": {"uv": [0, 0, 3, 16], "rotation": 90, "texture": "#texture", "cullface": "east"},
+        "south": {"uv": [0, 0, 16, 3], "texture": "#top", "cullface": "south"},
+        "west": {"uv": [0, 0, 3, 16], "rotation": 90, "texture": "#texture", "cullface": "west"},
+        "up": {"uv": [16, 16, 0, 0], "texture": "#texture", "cullface": "up"},
+        "down": {"uv": [16, 0, 0, 16], "texture": "#texture"}
+      }
+    }
+  ]
+}

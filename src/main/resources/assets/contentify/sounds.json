@@ -1,0 +1,112 @@
+{
+  "item.armor.equip_bone": {
+    "category": "player",
+    "subtitle": "subtitles.item.armor.equip_bone",
+    "sounds": [
+      {
+        "name": "contentify:equip_bone1",
+        "stream": false
+      },
+      {
+        "name": "contentify:equip_bone2",
+        "stream": false
+      },
+      {
+        "name": "contentify:equip_bone3",
+        "stream": false
+      },
+      {
+        "name": "contentify:equip_bone4",
+        "stream": false
+      },
+      {
+        "name": "contentify:equip_bone5",
+        "stream": false
+      },
+      {
+        "name": "contentify:equip_bone6",
+        "stream": false
+      }
+    ]
+  },
+  "item.armor.hit.bone": {
+    "category": "neutral",
+    "subtitle": "subtitles.item.armor.hit.bone",
+    "sounds": [
+      {
+        "name": "contentify:hit_bone1",
+        "stream": false
+      },
+      {
+        "name": "contentify:hit_bone2",
+        "stream": false
+      },
+      {
+        "name": "contentify:hit_bone3",
+        "stream": false
+      }
+    ]
+  },
+  "item.bonemeal.use": {
+    "category": "player",
+    "subtitle": "subtitles.item.bonemeal.use",
+    "sounds": [
+      {
+        "name": "contentify:bonemeal1",
+        "stream": false
+      },
+      {
+        "name": "contentify:bonemeal2",
+        "stream": false
+      },
+      {
+        "name": "contentify:bonemeal3",
+        "stream": false
+      },
+      {
+        "name": "contentify:bonemeal4",
+        "stream": false
+      },
+      {
+        "name": "contentify:bonemeal5",
+        "stream": false
+      }
+    ]
+  },
+  "item.withered.bonemeal.use": {
+    "category": "player",
+    "subtitle": "subtitles.item.withered.bonemeal.use",
+    "sounds": [
+      {
+        "name": "contentify:withered_bonemeal1",
+        "stream": false
+      },
+      {
+        "name": "contentify:withered_bonemeal2",
+        "stream": false
+      },
+      {
+        "name": "contentify:withered_bonemeal3",
+        "stream": false
+      },
+      {
+        "name": "contentify:withered_bonemeal4",
+        "stream": false
+      },
+      {
+        "name": "contentify:withered_bonemeal5",
+        "stream": false
+      }
+    ]
+  },
+  "block.paper.button.destroy": {
+    "category": "block",
+    "subtitle": "subtitles.block.paper.button.destroy",
+    "sounds": [
+      {
+        "name": "contentify:paper_button1",
+        "stream": false
+      }
+    ]
+  }
+}

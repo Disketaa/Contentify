@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "contentify:block/rice_block",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "contentify:block/rice_block"
+    },
+    "axis=z": {
+      "model": "contentify:block/rice_block",
+      "x": 90
+    }
+  }
+}

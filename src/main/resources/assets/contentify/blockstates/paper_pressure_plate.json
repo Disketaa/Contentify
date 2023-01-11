@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "contentify:block/paper_pressure_plate"
+    },
+    "powered=true": {
+      "model": "contentify:block/paper_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "contentify:blocks/dried_bamboo_block_top",
+    "top": "contentify:blocks/dried_bamboo_block_top",
+    "side": "contentify:blocks/dried_bamboo_block_side"
+  }
+}

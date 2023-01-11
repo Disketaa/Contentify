@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "contentify:blocks/withered_bone_block_top",
+    "up": "contentify:blocks/withered_bone_block_top",
+    "north": "contentify:blocks/withered_bone_block_side",
+    "east": "contentify:blocks/withered_bone_block_side",
+    "south": "contentify:blocks/withered_bone_block_side",
+    "west": "contentify:blocks/withered_bone_block_side",
+    "particle": "contentify:blocks/withered_bone_block_top"
+  }
+}
