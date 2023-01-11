@@ -23,7 +23,7 @@ import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 
-public class BonemealSoundsProcedure {
+public class BoneMealSoundsProcedure {
 	@Mod.EventBusSubscriber
 	private static class GlobalTrigger {
 		@SubscribeEvent
@@ -50,27 +50,27 @@ public class BonemealSoundsProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				ContentifyMod.LOGGER.warn("Failed to load dependency world for procedure BonemealSounds!");
+				ContentifyMod.LOGGER.warn("Failed to load dependency world for procedure BoneMealSounds!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				ContentifyMod.LOGGER.warn("Failed to load dependency x for procedure BonemealSounds!");
+				ContentifyMod.LOGGER.warn("Failed to load dependency x for procedure BoneMealSounds!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				ContentifyMod.LOGGER.warn("Failed to load dependency y for procedure BonemealSounds!");
+				ContentifyMod.LOGGER.warn("Failed to load dependency y for procedure BoneMealSounds!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				ContentifyMod.LOGGER.warn("Failed to load dependency z for procedure BonemealSounds!");
+				ContentifyMod.LOGGER.warn("Failed to load dependency z for procedure BoneMealSounds!");
 			return;
 		}
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				ContentifyMod.LOGGER.warn("Failed to load dependency entity for procedure BonemealSounds!");
+				ContentifyMod.LOGGER.warn("Failed to load dependency entity for procedure BoneMealSounds!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");

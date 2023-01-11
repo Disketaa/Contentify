@@ -20,7 +20,7 @@ import net.disketaa.contentify.itemgroup.ContentifyItemGroup;
 import net.disketaa.contentify.ContentifyModElements;
 
 @ContentifyModElements.ModElement.Tag
-public class BoneItem extends ContentifyModElements.ModElement {
+public class BoneArmorItem extends ContentifyModElements.ModElement {
 	@ObjectHolder("contentify:bone_helmet")
 	public static final Item helmet = null;
 	@ObjectHolder("contentify:bone_chestplate")
@@ -30,8 +30,8 @@ public class BoneItem extends ContentifyModElements.ModElement {
 	@ObjectHolder("contentify:bone_boots")
 	public static final Item boots = null;
 
-	public BoneItem(ContentifyModElements instance) {
-		super(instance, 21);
+	public BoneArmorItem(ContentifyModElements instance) {
+		super(instance, 75);
 	}
 
 	@Override

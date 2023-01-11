@@ -11,16 +11,15 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.disketaa.contentify.item.WitheredBoneArmorItem;
 import net.disketaa.contentify.ContentifyMod;
 
 import java.util.Random;
@@ -92,47 +91,46 @@ public class WitheredBoneArmorEffectProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (sourceentity instanceof MobEntity || sourceentity instanceof PlayerEntity) {
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.HEAD) : ItemStack.EMPTY)
-					.getItem() == WitheredBoneArmorItem.helmet
-					&& ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST) : ItemStack.EMPTY)
-							.getItem() == WitheredBoneArmorItem.body
-					&& ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.LEGS) : ItemStack.EMPTY)
-							.getItem() == WitheredBoneArmorItem.legs
-					&& ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET) : ItemStack.EMPTY)
-							.getItem() == WitheredBoneArmorItem.boots) {
-				if (!((sourceentity instanceof PlayerEntity) ? ((PlayerEntity) sourceentity).abilities.isCreativeMode : false)) {
-					if (!(new Object() {
-						boolean check(Entity _entity) {
-							if (_entity instanceof LivingEntity) {
-								Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-								for (EffectInstance effect : effects) {
-									if (effect.getPotion() == Effects.WITHER)
-										return true;
-								}
+		if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:withered_bone_armor")).contains(
+				((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET) : ItemStack.EMPTY).getItem())
+				&& ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:withered_bone_armor")).contains(
+						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.LEGS) : ItemStack.EMPTY)
+								.getItem())
+				&& ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:withered_bone_armor")).contains(
+						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST) : ItemStack.EMPTY)
+								.getItem())
+				&& ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:withered_bone_armor")).contains(
+						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.HEAD) : ItemStack.EMPTY)
+								.getItem())) {
+			if (!((sourceentity instanceof PlayerEntity) ? ((PlayerEntity) sourceentity).abilities.isCreativeMode : false)) {
+				if (!(new Object() {
+					boolean check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == Effects.WITHER)
+									return true;
 							}
-							return false;
 						}
-					}.check(sourceentity))) {
-						if (Math.random() < 0.9) {
-							{
-								Entity _ent = sourceentity;
-								if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-									_ent.world.getServer().getCommandManager().handleCommand(
-											_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "effect give @s wither 3");
-								}
+						return false;
+					}
+				}.check(sourceentity))) {
+					if (Math.random() < 0.5) {
+						{
+							Entity _ent = sourceentity;
+							if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+								_ent.world.getServer().getCommandManager().handleCommand(
+										_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "effect give @s wither 3");
 							}
-							if (world instanceof World && !world.isRemote()) {
-								((World) world).playSound(null, new BlockPos(x, y, z),
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("entity.wither.hurt")),
-										SoundCategory.AMBIENT, (float) 0.4, (float) (MathHelper.nextInt(new Random(), (int) 0.5, (int) 0.6)));
-							} else {
-								((World) world).playSound(x, y, z,
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("entity.wither.hurt")),
-										SoundCategory.AMBIENT, (float) 0.4, (float) (MathHelper.nextInt(new Random(), (int) 0.5, (int) 0.6)), false);
-							}
+						}
+						if (world instanceof World && !world.isRemote()) {
+							((World) world).playSound(null, new BlockPos(x, y, z),
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wither.hurt")),
+									SoundCategory.AMBIENT, (float) 0.4, (float) (MathHelper.nextInt(new Random(), (int) 0.5, (int) 0.6)));
+						} else {
+							((World) world).playSound(x, y, z,
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wither.hurt")),
+									SoundCategory.AMBIENT, (float) 0.4, (float) (MathHelper.nextInt(new Random(), (int) 0.5, (int) 0.6)), false);
 						}
 					}
 				}

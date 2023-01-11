@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "contentify:bone_helmet",
+    "contentify:bone_chestplate",
+    "contentify:bone_leggings",
+    "contentify:bone_boots"
+  ]
+}
