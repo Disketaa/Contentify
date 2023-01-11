@@ -31,7 +31,7 @@ public class BoneArmorItem extends ContentifyModElements.ModElement {
 	public static final Item boots = null;
 
 	public BoneArmorItem(ContentifyModElements instance) {
-		super(instance, 75);
+		super(instance, 30);
 	}
 
 	@Override

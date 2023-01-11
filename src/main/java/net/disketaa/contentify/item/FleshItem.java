@@ -26,7 +26,7 @@ public class FleshItem extends ContentifyModElements.ModElement {
 	public static final Item block = null;
 
 	public FleshItem(ContentifyModElements instance) {
-		super(instance, 31);
+		super(instance, 29);
 	}
 
 	@Override

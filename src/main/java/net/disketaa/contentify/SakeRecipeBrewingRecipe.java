@@ -17,7 +17,7 @@ import net.disketaa.contentify.item.RiceBallItem;
 @ContentifyModElements.ModElement.Tag
 public class SakeRecipeBrewingRecipe extends ContentifyModElements.ModElement {
 	public SakeRecipeBrewingRecipe(ContentifyModElements instance) {
-		super(instance, 66);
+		super(instance, 63);
 	}
 
 	@Override

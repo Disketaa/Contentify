@@ -33,7 +33,7 @@ public class RiceBaleBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public RiceBaleBlock(ContentifyModElements instance) {
-		super(instance, 15);
+		super(instance, 14);
 	}
 
 	@Override

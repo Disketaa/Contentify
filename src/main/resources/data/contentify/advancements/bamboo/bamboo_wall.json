@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "contentify:bamboo/bamboo_wall"
+    ]
+  },
+  "criteria": {
+    "has_dried_bamboo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "contentify:dried_bamboo"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "contentify:bamboo/bamboo_wall"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dried_bamboo",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -17,7 +17,7 @@ public class DriedBambooItem extends ContentifyModElements.ModElement {
 	public static final Item block = null;
 
 	public DriedBambooItem(ContentifyModElements instance) {
-		super(instance, 23);
+		super(instance, 21);
 	}
 
 	@Override

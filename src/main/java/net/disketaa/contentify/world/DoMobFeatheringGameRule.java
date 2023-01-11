@@ -14,7 +14,7 @@ public class DoMobFeatheringGameRule extends ContentifyModElements.ModElement {
 			create(true));
 
 	public DoMobFeatheringGameRule(ContentifyModElements instance) {
-		super(instance, 42);
+		super(instance, 40);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

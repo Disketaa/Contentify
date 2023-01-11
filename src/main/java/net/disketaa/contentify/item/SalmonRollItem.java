@@ -18,7 +18,7 @@ public class SalmonRollItem extends ContentifyModElements.ModElement {
 	public static final Item block = null;
 
 	public SalmonRollItem(ContentifyModElements instance) {
-		super(instance, 29);
+		super(instance, 27);
 	}
 
 	@Override

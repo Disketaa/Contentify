@@ -48,7 +48,7 @@ public class WitheredFlowerBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public WitheredFlowerBlock(ContentifyModElements instance) {
-		super(instance, 17);
+		super(instance, 16);
 	}
 
 	@Override

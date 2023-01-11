@@ -40,7 +40,7 @@ public class WitheredBoneBlockBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public WitheredBoneBlockBlock(ContentifyModElements instance) {
-		super(instance, 16);
+		super(instance, 15);
 	}
 
 	@Override

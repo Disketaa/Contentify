@@ -13,7 +13,7 @@ import net.disketaa.contentify.ContentifyModElements;
 @ContentifyModElements.ModElement.Tag
 public class ContentifyItemGroup extends ContentifyModElements.ModElement {
 	public ContentifyItemGroup(ContentifyModElements instance) {
-		super(instance, 32);
+		super(instance, 31);
 	}
 
 	@Override
