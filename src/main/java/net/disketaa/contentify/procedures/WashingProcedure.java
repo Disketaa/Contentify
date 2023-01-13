@@ -105,7 +105,7 @@ public class WashingProcedure {
 					return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
 				}
 			}.get(blockstate, "level")) != 0) {
-				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored_banners"))
+				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored/banners"))
 						.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem())) {
 					if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 1), (z + 0.5), new ItemStack(Blocks.WHITE_BANNER));
@@ -114,7 +114,7 @@ public class WashingProcedure {
 					}
 					correct = (true);
 				}
-				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored_beds"))
+				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored/beds"))
 						.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem())) {
 					if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 1), (z + 0.5), new ItemStack(Blocks.WHITE_BED));
@@ -123,7 +123,7 @@ public class WashingProcedure {
 					}
 					correct = (true);
 				}
-				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored_carpets"))
+				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored/carpets"))
 						.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem())) {
 					if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 1), (z + 0.5), new ItemStack(Blocks.WHITE_CARPET));
@@ -132,7 +132,7 @@ public class WashingProcedure {
 					}
 					correct = (true);
 				}
-				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored_concrete"))
+				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored/concrete"))
 						.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem())) {
 					if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 1), (z + 0.5), new ItemStack(Blocks.WHITE_CONCRETE));
@@ -141,7 +141,7 @@ public class WashingProcedure {
 					}
 					correct = (true);
 				}
-				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored_glass"))
+				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored/glass"))
 						.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem())) {
 					if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 1), (z + 0.5), new ItemStack(Blocks.GLASS));
@@ -150,7 +150,7 @@ public class WashingProcedure {
 					}
 					correct = (true);
 				}
-				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored_glass_panes"))
+				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored/glass_panes"))
 						.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem())) {
 					if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 1), (z + 0.5), new ItemStack(Blocks.GLASS_PANE));
@@ -159,7 +159,7 @@ public class WashingProcedure {
 					}
 					correct = (true);
 				}
-				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored_terracotta"))
+				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored/terracotta"))
 						.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem())) {
 					if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 1), (z + 0.5), new ItemStack(Blocks.TERRACOTTA));
@@ -168,7 +168,7 @@ public class WashingProcedure {
 					}
 					correct = (true);
 				}
-				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored_wool"))
+				if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:colored/wool"))
 						.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem())) {
 					if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 1), (z + 0.5), new ItemStack(Blocks.WHITE_WOOL));
