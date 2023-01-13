@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:paper_lamp"
+      "contentify:paper/paper_lamp"
     ]
   },
   "criteria": {
-    "has_dried_bamboo": {
+    "has_paper": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "contentify:dried_bamboo"
+            "item": "minecraft:paper"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:paper_lamp"
+        "recipe": "contentify:paper/paper_lamp"
       }
     }
   },
   "requirements": [
     [
-      "has_dried_bamboo",
+      "has_paper",
       "has_the_recipe"
     ]
   ]

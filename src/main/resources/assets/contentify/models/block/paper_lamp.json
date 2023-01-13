@@ -1,12 +1,8 @@
 {
-  "parent": "block/cube",
+  "parent": "contentify:custom/paper_lamp",
   "textures": {
-    "down": "contentify:blocks/paper_lamp",
-    "up": "contentify:blocks/paper_lamp",
-    "north": "contentify:blocks/paper_lamp",
-    "east": "contentify:blocks/paper_lamp",
-    "south": "contentify:blocks/paper_lamp",
-    "west": "contentify:blocks/paper_lamp",
-    "particle": "contentify:blocks/paper_lamp"
+    "all": "contentify:blocks/paper_lamp",
+    "particle": "contentify:blocks/paper_lamp",
+    "texture": "contentify:blocks/paper_lamp"
   }
 }

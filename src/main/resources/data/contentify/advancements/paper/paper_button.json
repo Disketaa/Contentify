@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:paper_pressure_plate"
+      "contentify:paper/paper_button"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:paper_pressure_plate"
+        "recipe": "contentify:paper/paper_button"
       }
     }
   },
