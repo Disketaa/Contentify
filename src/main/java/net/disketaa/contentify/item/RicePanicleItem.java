@@ -6,19 +6,18 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
-import net.minecraft.item.Food;
 import net.minecraft.block.BlockState;
 
 import net.disketaa.contentify.itemgroup.ContentifyItemGroup;
 import net.disketaa.contentify.ContentifyModElements;
 
 @ContentifyModElements.ModElement.Tag
-public class CodRollItem extends ContentifyModElements.ModElement {
-	@ObjectHolder("contentify:cod_roll")
+public class RicePanicleItem extends ContentifyModElements.ModElement {
+	@ObjectHolder("contentify:rice_panicle")
 	public static final Item block = null;
 
-	public CodRollItem(ContentifyModElements instance) {
-		super(instance, 27);
+	public RicePanicleItem(ContentifyModElements instance) {
+		super(instance, 23);
 	}
 
 	@Override
@@ -28,21 +27,13 @@ public class CodRollItem extends ContentifyModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ContentifyItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(2).saturation(0.5f)
-
-							.build()));
-			setRegistryName("cod_roll");
+			super(new Item.Properties().group(ContentifyItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
+			setRegistryName("rice_panicle");
 		}
 
 		@Override
 		public int getItemEnchantability() {
 			return 0;
-		}
-
-		@Override
-		public int getUseDuration(ItemStack itemstack) {
-			return 24;
 		}
 
 		@Override

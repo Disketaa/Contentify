@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:rice_ball"
+      "contentify:rice/fish_roll"
     ]
   },
   "criteria": {
-    "has_rice": {
+    "has_rice_ball": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "contentify:rice"
+            "tag": "contentify:rice_ball"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:rice_ball"
+        "recipe": "contentify:rice/fish_roll"
       }
     }
   },
   "requirements": [
     [
-      "has_rice",
+      "has_rice_ball",
       "has_the_recipe"
     ]
   ]

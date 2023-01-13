@@ -5,14 +5,14 @@
             "item": "minecraft:dried_kelp"
         },
         {
-            "tag": "contentify:rice_ball"
+            "item": "contentify:rice"
         },
         {
-            "item": "minecraft:cooked_salmon"
+            "tag": "forge:cooked_meat"
         }
     ],
     "result": {
-        "item": "contentify:salmon_roll",
-        "count": 4
+        "item": "contentify:meat_roll",
+        "count": 3
     }
 }

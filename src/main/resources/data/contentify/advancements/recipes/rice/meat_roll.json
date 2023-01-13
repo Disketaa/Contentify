@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:bowl_of_rice"
+      "contentify:rice/meat_roll"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:bowl_of_rice"
+        "recipe": "contentify:rice/meat_roll"
       }
     }
   },

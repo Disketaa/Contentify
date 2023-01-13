@@ -13,12 +13,12 @@ import net.disketaa.contentify.itemgroup.ContentifyItemGroup;
 import net.disketaa.contentify.ContentifyModElements;
 
 @ContentifyModElements.ModElement.Tag
-public class SalmonRollItem extends ContentifyModElements.ModElement {
-	@ObjectHolder("contentify:salmon_roll")
+public class MeatRollItem extends ContentifyModElements.ModElement {
+	@ObjectHolder("contentify:meat_roll")
 	public static final Item block = null;
 
-	public SalmonRollItem(ContentifyModElements instance) {
-		super(instance, 28);
+	public MeatRollItem(ContentifyModElements instance) {
+		super(instance, 27);
 	}
 
 	@Override
@@ -29,10 +29,10 @@ public class SalmonRollItem extends ContentifyModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ContentifyItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(3).saturation(0.5f)
+					.food((new Food.Builder()).hunger(5).saturation(0.4f)
 
 							.build()));
-			setRegistryName("salmon_roll");
+			setRegistryName("meat_roll");
 		}
 
 		@Override

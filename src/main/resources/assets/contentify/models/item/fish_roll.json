@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contentify:items/rice_ball"
+    "layer0": "contentify:items/fish_roll"
   }
 }

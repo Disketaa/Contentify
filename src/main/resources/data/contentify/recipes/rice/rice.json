@@ -5,10 +5,10 @@
     ],
     "key": {
         "#": {
-            "tag": "contentify:rice"
+            "item": "contentify:rice_panicle"
         }
     },
     "result": {
-        "item": "contentify:rice_ball"
+        "item": "contentify:rice"
     }
 }

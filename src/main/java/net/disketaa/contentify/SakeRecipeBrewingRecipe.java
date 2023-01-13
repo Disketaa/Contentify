@@ -12,7 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 
 import net.disketaa.contentify.item.SakeItem;
-import net.disketaa.contentify.item.RiceBallItem;
+import net.disketaa.contentify.item.RiceItem;
 
 @ContentifyModElements.ModElement.Tag
 public class SakeRecipeBrewingRecipe extends ContentifyModElements.ModElement {
@@ -35,7 +35,7 @@ public class SakeRecipeBrewingRecipe extends ContentifyModElements.ModElement {
 
 		@Override
 		public boolean isIngredient(ItemStack ingredient) {
-			return ingredient.getItem() == RiceBallItem.block;
+			return ingredient.getItem() == RiceItem.block;
 		}
 
 		@Override
