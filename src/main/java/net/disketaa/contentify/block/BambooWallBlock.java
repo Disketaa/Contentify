@@ -7,8 +7,6 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.IBlockReader;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -33,7 +31,7 @@ public class BambooWallBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public BambooWallBlock(ContentifyModElements instance) {
-		super(instance, 12);
+		super(instance, 6);
 	}
 
 	@Override
@@ -53,11 +51,6 @@ public class BambooWallBlock extends ContentifyModElements.ModElement {
 			super(Block.Properties.create(Material.BAMBOO).sound(SoundType.BAMBOO).hardnessAndResistance(1f, 4f).setLightLevel(s -> 0).harvestLevel(0)
 					.harvestTool(ToolType.AXE).notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("bamboo_wall");
-		}
-
-		@Override
-		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return 6;
 		}
 
 		@Override

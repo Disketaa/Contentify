@@ -17,7 +17,7 @@ public class WitheredBoneMealItem extends ContentifyModElements.ModElement {
 	public static final Item block = null;
 
 	public WitheredBoneMealItem(ContentifyModElements instance) {
-		super(instance, 18);
+		super(instance, 19);
 	}
 
 	@Override

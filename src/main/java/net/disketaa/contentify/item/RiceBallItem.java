@@ -22,7 +22,7 @@ public class RiceBallItem extends ContentifyModElements.ModElement {
 	public static final Item block = null;
 
 	public RiceBallItem(ContentifyModElements instance) {
-		super(instance, 24);
+		super(instance, 25);
 	}
 
 	@Override

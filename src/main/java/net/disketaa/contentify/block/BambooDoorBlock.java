@@ -33,7 +33,7 @@ public class BambooDoorBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public BambooDoorBlock(ContentifyModElements instance) {
-		super(instance, 13);
+		super(instance, 14);
 	}
 
 	@Override

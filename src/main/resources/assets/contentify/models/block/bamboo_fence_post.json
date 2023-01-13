@@ -1,7 +1,7 @@
 {
   "parent": "block/fence_post",
   "textures": {
-    "texture": "contentify:blocks/bamboo_planks_side",
-    "particle": "contentify:blocks/bamboo_planks_side"
+    "texture": "contentify:blocks/bamboo_planks",
+    "particle": "contentify:blocks/bamboo_planks"
   }
 }

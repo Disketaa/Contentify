@@ -18,7 +18,7 @@ public class CodRollItem extends ContentifyModElements.ModElement {
 	public static final Item block = null;
 
 	public CodRollItem(ContentifyModElements instance) {
-		super(instance, 26);
+		super(instance, 27);
 	}
 
 	@Override

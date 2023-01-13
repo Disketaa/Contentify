@@ -1,14 +1,19 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "contentify:dried_bamboo"
+    },
+    {
+        "item": "contentify:bamboo_planks"
+    },
+    {
+        "item": "contentify:bamboo_planks"
+    },
+    {
         "item": "contentify:dried_bamboo"
     }
-  },
+  ],            
   "result": {
     "item": "contentify:bamboo_wall",
     "count": 2

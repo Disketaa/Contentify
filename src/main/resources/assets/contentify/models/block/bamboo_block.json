@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "contentify:blocks/bamboo_block_side",
+    "particle": "contentify:blocks/bamboo_block_side"
+  }
+}

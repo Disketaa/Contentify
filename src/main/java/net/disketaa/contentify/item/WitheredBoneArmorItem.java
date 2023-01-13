@@ -30,7 +30,7 @@ public class WitheredBoneArmorItem extends ContentifyModElements.ModElement {
 	public static final Item boots = null;
 
 	public WitheredBoneArmorItem(ContentifyModElements instance) {
-		super(instance, 19);
+		super(instance, 20);
 	}
 
 	@Override

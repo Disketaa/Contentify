@@ -29,7 +29,7 @@ public class SakeItem extends ContentifyModElements.ModElement {
 	public static final Item block = null;
 
 	public SakeItem(ContentifyModElements instance) {
-		super(instance, 28);
+		super(instance, 29);
 	}
 
 	@Override
