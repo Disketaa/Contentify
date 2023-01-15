@@ -18,7 +18,7 @@ public class WitheredBoneExtensionItemExtension {
 			ItemStack itemstack = event.getItemStack();
 			if (itemstack.getItem() == WitheredBoneItem.block)
 
-				event.setBurnTime(400);
+				event.setBurnTime(200);
 		}
 	}
 }

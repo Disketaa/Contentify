@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:paper/paper_button"
+      "contentify:rice/block"
     ]
   },
   "criteria": {
-    "has_paper": {
+    "has_rice_panicle": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:paper"
+            "item": "contentify:rice_panicle"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:paper/paper_button"
+        "recipe": "contentify:rice/block"
       }
     }
   },
   "requirements": [
     [
-      "has_paper",
+      "has_rice_panicle",
       "has_the_recipe"
     ]
   ]

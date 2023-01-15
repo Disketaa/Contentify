@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:paper/paper_pressure_plate"
+      "contentify:bamboo/block"
     ]
   },
   "criteria": {
-    "has_paper": {
+    "has_dried_bamboo": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:paper"
+            "item": "contentify:dried_bamboo"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:paper/paper_pressure_plate"
+        "recipe": "contentify:bamboo/block"
       }
     }
   },
   "requirements": [
     [
-      "has_paper",
+      "has_dried_bamboo",
       "has_the_recipe"
     ]
   ]

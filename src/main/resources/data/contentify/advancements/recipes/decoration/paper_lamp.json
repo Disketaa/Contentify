@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:bamboo/bamboo_door"
+      "contentify:paper/lamp"
     ]
   },
   "criteria": {
-    "has_bamboo_planks": {
+    "has_paper": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "contentify:bamboo_planks"
+            "item": "minecraft:paper"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:bamboo/bamboo_door"
+        "recipe": "contentify:paper/lamp"
       }
     }
   },
   "requirements": [
     [
-      "has_bamboo_planks",
+      "has_paper",
       "has_the_recipe"
     ]
   ]

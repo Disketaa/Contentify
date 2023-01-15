@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:leather_from_blasting"
+      "contentify:bamboo/gate"
     ]
   },
   "criteria": {
-    "has_flesh": {
+    "has_bamboo_planks": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "contentify:flesh"
+            "item": "contentify:bamboo_planks"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:leather_from_blasting"
+        "recipe": "contentify:bamboo/gate"
       }
     }
   },
   "requirements": [
     [
-      "has_flesh",
+      "has_bamboo_planks",
       "has_the_recipe"
     ]
   ]

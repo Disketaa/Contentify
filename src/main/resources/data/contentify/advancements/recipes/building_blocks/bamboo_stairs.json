@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:rice"
+      "contentify:bamboo/stairs"
     ]
   },
   "criteria": {
-    "has_rice_block": {
+    "has_bamboo_planks": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "contentify:rice_block"
+            "item": "contentify:bamboo_planks"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:rice"
+        "recipe": "contentify:bamboo/stairs"
       }
     }
   },
   "requirements": [
     [
-      "has_rice_block",
+      "has_bamboo_planks",
       "has_the_recipe"
     ]
   ]

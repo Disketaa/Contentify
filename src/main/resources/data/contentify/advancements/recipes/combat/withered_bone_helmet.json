@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:withered_bone_helmet"
+      "contentify:withered_bone/helmet"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:withered_bone_helmet"
+        "recipe": "contentify:withered_bone/helmet"
       }
     }
   },

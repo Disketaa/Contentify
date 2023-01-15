@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:bamboo/bamboo_fence"
+      "contentify:bamboo/planks"
     ]
   },
   "criteria": {
-    "has_bamboo_planks": {
+    "has_dried_bamboo": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "contentify:bamboo_planks"
+            "item": "contentify:dried_bamboo"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:bamboo/bamboo_fence"
+        "recipe": "contentify:bamboo/planks"
       }
     }
   },
   "requirements": [
     [
-      "has_bamboo_planks",
+      "has_dried_bamboo",
       "has_the_recipe"
     ]
   ]

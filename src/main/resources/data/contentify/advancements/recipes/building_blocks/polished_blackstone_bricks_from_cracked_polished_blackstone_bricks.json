@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:polished_blackstone_bricks_from_cracked_polished_blackstone_bricks"
+      "contentify:misc/polished_blackstone_bricks_from_cracked_polished_blackstone_bricks"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:polished_blackstone_bricks_from_cracked_polished_blackstone_bricks"
+        "recipe": "contentify:misc/polished_blackstone_bricks_from_cracked_polished_blackstone_bricks"
       }
     }
   },
