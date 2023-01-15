@@ -44,7 +44,7 @@ public class RicePodsBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public RicePodsBlock(ContentifyModElements instance) {
-		super(instance, 59);
+		super(instance, 57);
 	}
 
 	@Override

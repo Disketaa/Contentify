@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "contentify:bamboo_block",
+    "contentify:bamboo_planks",
+    "contentify:bamboo_stairs",
+    "contentify:bamboo_slab",
+    "contentify:bamboo_fence",
+    "contentify:bamboo_gate",
+    "contentify:bamboo_trapdoor",
+    "contentify:bamboo_wall",
+    "contentify:bamboo_door"
+  ]
+}

@@ -7,7 +7,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
-import net.disketaa.contentify.item.RiceItem;
+import net.disketaa.contentify.block.BambooBlockBlock;
 import net.disketaa.contentify.ContentifyModElements;
 
 @ContentifyModElements.ModElement.Tag
@@ -22,7 +22,7 @@ public class ContentifyItemGroup extends ContentifyModElements.ModElement {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(RiceItem.block);
+				return new ItemStack(BambooBlockBlock.block);
 			}
 
 			@OnlyIn(Dist.CLIENT)

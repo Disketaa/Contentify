@@ -11,14 +11,13 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.disketaa.contentify.item.BoneItem;
 import net.disketaa.contentify.ContentifyMod;
 
 import java.util.Random;
@@ -78,51 +77,45 @@ public class BoneArmorSoundsProcedure {
 				ContentifyMod.LOGGER.warn("Failed to load dependency entity for procedure BoneArmorSounds!");
 			return;
 		}
-		if (dependencies.get("sourceentity") == null) {
-			if (!dependencies.containsKey("sourceentity"))
-				ContentifyMod.LOGGER.warn("Failed to load dependency sourceentity for procedure BoneArmorSounds!");
-			return;
-		}
 		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (sourceentity instanceof MobEntity || sourceentity instanceof PlayerEntity) {
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.HEAD) : ItemStack.EMPTY)
-					.getItem() == BoneItem.helmet
-					|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST) : ItemStack.EMPTY)
-							.getItem() == BoneItem.body
-					|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.LEGS) : ItemStack.EMPTY)
-							.getItem() == BoneItem.legs
-					|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET) : ItemStack.EMPTY)
-							.getItem() == BoneItem.boots) {
-				if (entity instanceof MobEntity) {
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos(x, y, z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-										.getValue(new ResourceLocation("contentify:item.armor.hit.bone")),
-								SoundCategory.HOSTILE, (float) 0.6, (float) (MathHelper.nextInt(new Random(), (int) 1.2, (int) 1.4)));
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-										.getValue(new ResourceLocation("contentify:item.armor.hit.bone")),
-								SoundCategory.HOSTILE, (float) 0.6, (float) (MathHelper.nextInt(new Random(), (int) 1.2, (int) 1.4)), false);
-					}
+		if (ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:skeleton_armor")).contains(
+				((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET) : ItemStack.EMPTY).getItem())
+				|| ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:skeleton_armor")).contains(
+						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.LEGS) : ItemStack.EMPTY)
+								.getItem())
+				|| ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:skeleton_armor")).contains(
+						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST) : ItemStack.EMPTY)
+								.getItem())
+				|| ItemTags.getCollection().getTagByID(new ResourceLocation("contentify:skeleton_armor")).contains(
+						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.HEAD) : ItemStack.EMPTY)
+								.getItem())) {
+			if (entity instanceof PlayerEntity) {
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos(x, y, z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+									.getValue(new ResourceLocation("contentify:item.armor.hit.bone")),
+							SoundCategory.PLAYERS, (float) 0.6, (float) (MathHelper.nextInt(new Random(), (int) 1.2, (int) 1.4)));
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+									.getValue(new ResourceLocation("contentify:item.armor.hit.bone")),
+							SoundCategory.PLAYERS, (float) 0.6, (float) (MathHelper.nextInt(new Random(), (int) 1.2, (int) 1.4)), false);
 				}
-				if (entity instanceof PlayerEntity) {
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos(x, y, z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-										.getValue(new ResourceLocation("contentify:item.armor.hit.bone")),
-								SoundCategory.PLAYERS, (float) 0.6, (float) (MathHelper.nextInt(new Random(), (int) 1.2, (int) 1.4)));
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-										.getValue(new ResourceLocation("contentify:item.armor.hit.bone")),
-								SoundCategory.PLAYERS, (float) 0.6, (float) (MathHelper.nextInt(new Random(), (int) 1.2, (int) 1.4)), false);
-					}
+			} else {
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos(x, y, z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+									.getValue(new ResourceLocation("contentify:item.armor.hit.bone")),
+							SoundCategory.HOSTILE, (float) 0.6, (float) (MathHelper.nextInt(new Random(), (int) 1.2, (int) 1.4)));
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+									.getValue(new ResourceLocation("contentify:item.armor.hit.bone")),
+							SoundCategory.HOSTILE, (float) 0.6, (float) (MathHelper.nextInt(new Random(), (int) 1.2, (int) 1.4)), false);
 				}
 			}
 		}

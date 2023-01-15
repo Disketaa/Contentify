@@ -26,7 +26,7 @@ public class FleshItem extends ContentifyModElements.ModElement {
 	public static final Item block = null;
 
 	public FleshItem(ContentifyModElements instance) {
-		super(instance, 31);
+		super(instance, 26);
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class FleshItem extends ContentifyModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ContentifyItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(4).saturation(0.6f)
+					.food((new Food.Builder()).hunger(4).saturation(0.3f)
 
 							.meat().build()));
 			setRegistryName("flesh");

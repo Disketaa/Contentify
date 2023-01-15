@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "contentify:redstone/bamboo_trapdoor"
+    ]
+  },
+  "criteria": {
+    "has_bamboo_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "contentify:bamboo_planks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "contentify:redstone/bamboo_trapdoor"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bamboo_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "contentify:blocks/bamboo_planks",
+    "up": "contentify:blocks/bamboo_planks",
+    "north": "contentify:blocks/bamboo_planks",
+    "east": "contentify:blocks/bamboo_planks",
+    "south": "contentify:blocks/bamboo_planks",
+    "west": "contentify:blocks/bamboo_planks",
+    "particle": "contentify:blocks/bamboo_planks"
+  }
+}

@@ -29,24 +29,6 @@
       }
     ]
   },
-  "item.armor.hit.bone": {
-    "category": "neutral",
-    "subtitle": "subtitles.item.armor.hit.bone",
-    "sounds": [
-      {
-        "name": "contentify:hit_bone1",
-        "stream": false
-      },
-      {
-        "name": "contentify:hit_bone2",
-        "stream": false
-      },
-      {
-        "name": "contentify:hit_bone3",
-        "stream": false
-      }
-    ]
-  },
   "item.bonemeal.use": {
     "category": "player",
     "subtitle": "subtitles.item.bonemeal.use",
@@ -99,12 +81,113 @@
       }
     ]
   },
-  "block.paper.button.destroy": {
-    "category": "block",
-    "subtitle": "subtitles.block.paper.button.destroy",
+  "item.armor.hit.bone": {
+    "category": "neutral",
+    "subtitle": "subtitles.item.armor.hit.bone",
     "sounds": [
       {
-        "name": "contentify:paper_button1",
+        "name": "contentify:hit_bone1",
+        "stream": false
+      },
+      {
+        "name": "contentify:hit_bone2",
+        "stream": false
+      },
+      {
+        "name": "contentify:hit_bone3",
+        "stream": false
+      }
+    ]
+  },
+  "block.paper.place": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "contentify:paper_place1",
+        "stream": false
+      },
+      {
+        "name": "contentify:paper_place2",
+        "stream": false
+      },
+      {
+        "name": "contentify:paper_place3",
+        "stream": false
+      },
+      {
+        "name": "contentify:paper_place4",
+        "stream": false
+      }
+    ]
+  },
+  "block.paper.hit": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "contentify:paper_hit1",
+        "stream": false
+      },
+      {
+        "name": "contentify:paper_hit2",
+        "stream": false
+      },
+      {
+        "name": "contentify:paper_hit3",
+        "stream": false
+      },
+      {
+        "name": "contentify:paper_hit4",
+        "stream": false
+      }
+    ]
+  },
+  "block.paper.fall": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "contentify:paper_fall1",
+        "stream": false
+      }
+    ]
+  },
+  "block.paper.step": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "contentify:paper_step1",
+        "stream": false
+      },
+      {
+        "name": "contentify:paper_step2",
+        "stream": false
+      },
+      {
+        "name": "contentify:paper_step3",
+        "stream": false
+      },
+      {
+        "name": "contentify:paper_step4",
+        "stream": false
+      }
+    ]
+  },
+  "block.paper.break": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "contentify:paper_break1",
+        "stream": false
+      },
+      {
+        "name": "contentify:paper_break2",
+        "stream": false
+      },
+      {
+        "name": "contentify:paper_break3",
+        "stream": false
+      },
+      {
+        "name": "contentify:paper_break4",
         "stream": false
       }
     ]

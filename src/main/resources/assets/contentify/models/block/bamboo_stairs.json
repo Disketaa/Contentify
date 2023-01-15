@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "contentify:blocks/bamboo_planks",
+    "top": "contentify:blocks/bamboo_planks",
+    "side": "contentify:blocks/bamboo_planks"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "contentify:misc/black_dye_from_withered_bone_meal"
+    ]
+  },
+  "criteria": {
+    "has_withered_bone_meal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "contentify:withered_bone_meal"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "contentify:misc/black_dye_from_withered_bone_meal"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_withered_bone_meal",
+      "has_the_recipe"
+    ]
+  ]
+}

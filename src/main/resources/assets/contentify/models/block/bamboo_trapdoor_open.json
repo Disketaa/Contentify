@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_orientable_trapdoor_open",
+  "textures": {
+    "texture": "contentify:blocks/bamboo_trapdoor",
+    "particle": "contentify:blocks/bamboo_trapdoor"
+  }
+}

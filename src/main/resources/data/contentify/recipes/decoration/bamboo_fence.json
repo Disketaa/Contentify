@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#/#",
+    "#/#"
+  ],
+  "key": {
+    "#": {
+      "item": "contentify:bamboo_planks"
+    },
+    "/": {
+      "item": "contentify:dried_bamboo"
+    }
+  },
+  "result": {
+    "item": "contentify:bamboo_fence",
+    "count": 3
+  }
+}

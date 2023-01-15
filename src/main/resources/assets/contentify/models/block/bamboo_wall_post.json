@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_glass_pane_post",
+  "textures": {
+    "edge": "contentify:blocks/bamboo_wall_top",
+    "pane": "contentify:blocks/bamboo_wall"
+  }
+}

@@ -1,7 +1,6 @@
 {
-  "parent": "contentify:item/template_wall",
+  "parent": "item/generated",
   "textures": {
-    "side": "contentify:blocks/dried_bamboo_wall_top",
-    "wall": "contentify:blocks/paper_wall"
+    "layer0": "contentify:blocks/paper_wall"
   }
 }

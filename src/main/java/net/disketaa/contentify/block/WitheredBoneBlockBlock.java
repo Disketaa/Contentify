@@ -12,7 +12,6 @@ import net.minecraft.util.Direction;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.EnumProperty;
-import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItemUseContext;
@@ -29,9 +28,7 @@ import net.disketaa.contentify.ContentifyModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
-import java.util.List;
 import java.util.HashMap;
-import java.util.Collections;
 import java.util.AbstractMap;
 
 @ContentifyModElements.ModElement.Tag
@@ -40,7 +37,7 @@ public class WitheredBoneBlockBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public WitheredBoneBlockBlock(ContentifyModElements instance) {
-		super(instance, 16);
+		super(instance, 13);
 	}
 
 	@Override
@@ -84,14 +81,6 @@ public class WitheredBoneBlockBlock extends ContentifyModElements.ModElement {
 				}
 			}
 			return state;
-		}
-
-		@Override
-		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-			if (!dropsOriginal.isEmpty())
-				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
 		}
 
 		@Override

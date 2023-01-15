@@ -48,14 +48,22 @@ public class ContentifyModElements {
 	public ContentifyModElements() {
 		sounds.put(new ResourceLocation("contentify", "item.armor.equip_bone"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "item.armor.equip_bone")));
-		sounds.put(new ResourceLocation("contentify", "item.armor.hit.bone"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "item.armor.hit.bone")));
 		sounds.put(new ResourceLocation("contentify", "item.bonemeal.use"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "item.bonemeal.use")));
 		sounds.put(new ResourceLocation("contentify", "item.withered.bonemeal.use"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "item.withered.bonemeal.use")));
-		sounds.put(new ResourceLocation("contentify", "block.paper.button.destroy"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "block.paper.button.destroy")));
+		sounds.put(new ResourceLocation("contentify", "item.armor.hit.bone"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "item.armor.hit.bone")));
+		sounds.put(new ResourceLocation("contentify", "block.paper.place"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "block.paper.place")));
+		sounds.put(new ResourceLocation("contentify", "block.paper.hit"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "block.paper.hit")));
+		sounds.put(new ResourceLocation("contentify", "block.paper.fall"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "block.paper.fall")));
+		sounds.put(new ResourceLocation("contentify", "block.paper.step"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "block.paper.step")));
+		sounds.put(new ResourceLocation("contentify", "block.paper.break"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("contentify", "block.paper.break")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("contentify").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

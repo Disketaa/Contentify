@@ -3,38 +3,45 @@ package net.disketaa.contentify.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.common.util.ForgeSoundType;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.IWorldReader;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.Rotation;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Direction;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.DirectionProperty;
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.HorizontalBlock;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.disketaa.contentify.procedures.PaperLampPlacementProcedure;
 import net.disketaa.contentify.itemgroup.ContentifyItemGroup;
 import net.disketaa.contentify.ContentifyModElements;
 
-import java.util.List;
-import java.util.Collections;
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @ContentifyModElements.ModElement.Tag
 public class PaperLampBlock extends ContentifyModElements.ModElement {
@@ -42,7 +49,7 @@ public class PaperLampBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public PaperLampBlock(ContentifyModElements instance) {
-		super(instance, 3);
+		super(instance, 15);
 	}
 
 	@Override
@@ -61,16 +68,26 @@ public class PaperLampBlock extends ContentifyModElements.ModElement {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
 		public CustomBlock() {
-			super(Block.Properties.create(Material.BAMBOO).sound(SoundType.SCAFFOLDING).hardnessAndResistance(0.5f, 1f).setLightLevel(s -> 14)
-					.notSolid().setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true)
-					.setOpaque((bs, br, bp) -> false));
+			super(Block.Properties.create(Material.WOOD)
+					.sound(new ForgeSoundType(1.0f, 1.0f, () -> new SoundEvent(new ResourceLocation("contentify:block.paper.break")),
+							() -> new SoundEvent(new ResourceLocation("contentify:block.paper.step")),
+							() -> new SoundEvent(new ResourceLocation("contentify:block.paper.place")),
+							() -> new SoundEvent(new ResourceLocation("contentify:block.paper.hit")),
+							() -> new SoundEvent(new ResourceLocation("contentify:block.paper.fall"))))
+					.hardnessAndResistance(0.5f, 0.5f).setLightLevel(s -> 14).harvestLevel(0).harvestTool(ToolType.AXE).notSolid()
+					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("paper_lamp");
 		}
 
 		@Override
+		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
+			return true;
+		}
+
+		@Override
 		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return 4;
+			return 0;
 		}
 
 		@Override
@@ -116,6 +133,29 @@ public class PaperLampBlock extends ContentifyModElements.ModElement {
 		}
 
 		@Override
+		public boolean isValidPosition(BlockState blockstate, IWorldReader worldIn, BlockPos pos) {
+			if (worldIn instanceof IWorld) {
+				IWorld world = (IWorld) worldIn;
+				int x = pos.getX();
+				int y = pos.getY();
+				int z = pos.getZ();
+				return PaperLampPlacementProcedure.executeProcedure(Stream
+						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+								new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			}
+			return super.isValidPosition(blockstate, worldIn, pos);
+		}
+
+		@Override
+		public BlockState updatePostPlacement(BlockState state, Direction facing, BlockState facingState, IWorld world, BlockPos currentPos,
+				BlockPos facingPos) {
+			return !state.isValidPosition(world, currentPos)
+					? Blocks.AIR.getDefaultState()
+					: super.updatePostPlacement(state, facing, facingState, world, currentPos, facingPos);
+		}
+
+		@Override
 		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 			return 60;
 		}
@@ -123,14 +163,6 @@ public class PaperLampBlock extends ContentifyModElements.ModElement {
 		@Override
 		public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 			return 30;
-		}
-
-		@Override
-		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-			if (!dropsOriginal.isEmpty())
-				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
 		}
 	}
 }

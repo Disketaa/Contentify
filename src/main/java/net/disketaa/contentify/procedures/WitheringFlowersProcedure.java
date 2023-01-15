@@ -43,7 +43,7 @@ public class WitheringFlowersProcedure {
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		if (BlockTags.getCollection().getTagByID(new ResourceLocation("contentify:flowers"))
+		if (BlockTags.getCollection().getTagByID(new ResourceLocation("contentify:witherable/flowers"))
 				.contains((world.getBlockState(new BlockPos(x, y, z))).getBlock())) {
 			if (world instanceof ServerWorld) {
 				((ServerWorld) world).spawnParticle(ParticleTypes.ASH, (x + 0.5), y, (z + 0.5), (int) 15, 0.25, 0.5, 0.25, 0.1);

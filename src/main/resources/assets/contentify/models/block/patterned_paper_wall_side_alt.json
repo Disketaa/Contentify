@@ -1,7 +1,7 @@
 {
   "parent": "block/template_glass_pane_side_alt",
   "textures": {
-    "edge": "contentify:blocks/dried_bamboo_wall_top",
+    "edge": "contentify:blocks/bamboo_wall_top",
     "pane": "contentify:blocks/patterned_paper_wall"
   }
 }

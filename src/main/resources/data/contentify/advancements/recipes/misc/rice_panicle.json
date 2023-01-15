@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "contentify:misc/rice_panicle"
+    ]
+  },
+  "criteria": {
+    "has_rice_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "contentify:rice_block"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "contentify:misc/rice_panicle"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_rice_block",
+      "has_the_recipe"
+    ]
+  ]
+}

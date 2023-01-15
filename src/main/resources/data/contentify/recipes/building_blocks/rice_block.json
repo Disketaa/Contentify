@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "contentify:rice_panicle"
+        }
+    },
+    "result": {
+        "item": "contentify:rice_block"
+    }
+}

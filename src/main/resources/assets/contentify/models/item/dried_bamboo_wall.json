@@ -1,7 +1,0 @@
-{
-  "parent": "contentify:item/template_wall",
-  "textures": {
-    "side": "contentify:blocks/dried_bamboo_wall_top",
-    "wall": "contentify:blocks/dried_bamboo_wall"
-  }
-}

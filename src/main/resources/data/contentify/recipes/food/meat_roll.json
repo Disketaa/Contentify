@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:dried_kelp"
+        },
+        {
+            "item": "contentify:rice"
+        },
+        {
+            "tag": "forge:cooked_meat"
+        }
+    ],
+    "result": {
+        "item": "contentify:meat_roll",
+        "count": 3
+    }
+}

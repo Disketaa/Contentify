@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "contentify:misc/black_dye_from_withered_flower"
+    ]
+  },
+  "criteria": {
+    "has_withered_flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "contentify:withered_flower"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "contentify:misc/black_dye_from_withered_flower"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_withered_flower",
+      "has_the_recipe"
+    ]
+  ]
+}

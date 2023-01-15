@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+      "#o#",
+      "#I#",
+      "#o#"
+  ],
+  "key": {
+    "#": {
+        "item": "minecraft:paper"
+    },
+    "o": {
+        "tag": "forge:nuggets/iron"
+    },
+    "I": {
+        "item": "minecraft:torch"
+    }
+  },
+  "result": {
+    "item": "contentify:paper_lamp"
+  }
+}

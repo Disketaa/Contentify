@@ -3,6 +3,7 @@ package net.disketaa.contentify.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.common.util.ForgeSoundType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -10,9 +11,9 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Direction;
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.entity.projectile.ProjectileEntity;
@@ -20,7 +21,6 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.StoneButtonBlock;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -32,9 +32,7 @@ import net.disketaa.contentify.ContentifyModElements;
 import java.util.stream.Stream;
 import java.util.Random;
 import java.util.Map;
-import java.util.List;
 import java.util.HashMap;
-import java.util.Collections;
 import java.util.AbstractMap;
 
 @ContentifyModElements.ModElement.Tag
@@ -43,7 +41,7 @@ public class PaperButtonBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public PaperButtonBlock(ContentifyModElements instance) {
-		super(instance, 2);
+		super(instance, 17);
 	}
 
 	@Override
@@ -60,17 +58,14 @@ public class PaperButtonBlock extends ContentifyModElements.ModElement {
 
 	public static class CustomBlock extends StoneButtonBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.BAMBOO).sound(SoundType.SCAFFOLDING).hardnessAndResistance(0.15f, 0.5f).setLightLevel(s -> 0)
-					.notSolid().setOpaque((bs, br, bp) -> false));
+			super(Block.Properties.create(Material.BAMBOO)
+					.sound(new ForgeSoundType(1.0f, 1.0f, () -> new SoundEvent(new ResourceLocation("contentify:block.paper.break")),
+							() -> new SoundEvent(new ResourceLocation("contentify:block.paper.step")),
+							() -> new SoundEvent(new ResourceLocation("contentify:block.paper.place")),
+							() -> new SoundEvent(new ResourceLocation("contentify:block.paper.hit")),
+							() -> new SoundEvent(new ResourceLocation("contentify:block.paper.fall"))))
+					.hardnessAndResistance(0.15f, 0.5f).setLightLevel(s -> 0).notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("paper_button");
-		}
-
-		@Override
-		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-			if (!dropsOriginal.isEmpty())
-				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
 		}
 
 		@Override
