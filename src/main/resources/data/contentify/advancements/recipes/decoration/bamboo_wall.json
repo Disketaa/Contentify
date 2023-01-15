@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:bamboo/wall"
+      "contentify:decoration/bamboo_wall"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:bamboo/wall"
+        "recipe": "contentify:decoration/bamboo_wall"
       }
     }
   },

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:bone/chestplate"
+      "contentify:combat/bone_chestplate"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:bone/chestplate"
+        "recipe": "contentify:combat/bone_chestplate"
       }
     }
   },

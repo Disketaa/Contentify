@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:misc/nether_bricks_from_cracked_nether_bricks"
+      "contentify:building_blocks/nether_bricks_from_cracked_nether_bricks"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:misc/nether_bricks_from_cracked_nether_bricks"
+        "recipe": "contentify:building_blocks/nether_bricks_from_cracked_nether_bricks"
       }
     }
   },

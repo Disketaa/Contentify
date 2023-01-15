@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:withered_bone/meal"
+      "contentify:misc/withered_bone_meal"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:withered_bone/meal"
+        "recipe": "contentify:misc/withered_bone_meal"
       }
     }
   },

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:paper/lamp"
+      "contentify:decoration/paper_lamp"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:paper/lamp"
+        "recipe": "contentify:decoration/paper_lamp"
       }
     }
   },

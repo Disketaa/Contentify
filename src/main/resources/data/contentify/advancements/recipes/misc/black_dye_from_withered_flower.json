@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:withered_bone/black_dye_from_withered_flower"
+      "contentify:misc/black_dye_from_withered_flower"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:withered_bone/black_dye_from_withered_flower"
+        "recipe": "contentify:misc/black_dye_from_withered_flower"
       }
     }
   },

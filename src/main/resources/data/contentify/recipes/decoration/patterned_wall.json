@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "/#",
+    "//"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:paper"
+    },
+    "/": {
+      "item": "contentify:dried_bamboo"
+    }
+  },
+  "result": {
+    "item": "contentify:patterned_paper_wall",
+    "count": 4
+  }
+}

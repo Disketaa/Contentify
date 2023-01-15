@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:bamboo/dried_bamboo_from_campfire_cooking"
+      "contentify:misc/dried_bamboo_from_campfire_cooking"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:bamboo/dried_bamboo_from_campfire_cooking"
+        "recipe": "contentify:misc/dried_bamboo_from_campfire_cooking"
       }
     }
   },
