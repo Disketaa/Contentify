@@ -1,6 +1,7 @@
 {
   "parent": "block/slab",
   "textures": {
+    "particle": "contentify:blocks/bamboo_planks",
     "bottom": "contentify:blocks/bamboo_planks",
     "top": "contentify:blocks/bamboo_planks",
     "side": "contentify:blocks/bamboo_planks"

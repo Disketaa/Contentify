@@ -7,8 +7,6 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -16,14 +14,10 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.PaneBlock;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.disketaa.contentify.itemgroup.ContentifyItemGroup;
 import net.disketaa.contentify.ContentifyModElements;
-
-import java.util.List;
-import java.util.Collections;
 
 @ContentifyModElements.ModElement.Tag
 public class BambooWallBlock extends ContentifyModElements.ModElement {
@@ -51,14 +45,6 @@ public class BambooWallBlock extends ContentifyModElements.ModElement {
 			super(Block.Properties.create(Material.BAMBOO).sound(SoundType.BAMBOO).hardnessAndResistance(1f, 4f).setLightLevel(s -> 0).harvestLevel(0)
 					.harvestTool(ToolType.AXE).notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("bamboo_wall");
-		}
-
-		@Override
-		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-			if (!dropsOriginal.isEmpty())
-				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
 		}
 	}
 }

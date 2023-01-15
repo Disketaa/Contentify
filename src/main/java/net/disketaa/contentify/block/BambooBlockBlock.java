@@ -10,8 +10,6 @@ import net.minecraft.util.Direction;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.EnumProperty;
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
@@ -22,9 +20,6 @@ import net.minecraft.block.Block;
 
 import net.disketaa.contentify.itemgroup.ContentifyItemGroup;
 import net.disketaa.contentify.ContentifyModElements;
-
-import java.util.List;
-import java.util.Collections;
 
 @ContentifyModElements.ModElement.Tag
 public class BambooBlockBlock extends ContentifyModElements.ModElement {
@@ -75,14 +70,6 @@ public class BambooBlockBlock extends ContentifyModElements.ModElement {
 				}
 			}
 			return state;
-		}
-
-		@Override
-		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-			if (!dropsOriginal.isEmpty())
-				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
 		}
 	}
 }
