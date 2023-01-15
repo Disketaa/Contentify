@@ -51,7 +51,7 @@ public class PaperLampBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public PaperLampBlock(ContentifyModElements instance) {
-		super(instance, 3);
+		super(instance, 15);
 	}
 
 	@Override

@@ -18,7 +18,7 @@ public class MeatRollItem extends ContentifyModElements.ModElement {
 	public static final Item block = null;
 
 	public MeatRollItem(ContentifyModElements instance) {
-		super(instance, 27);
+		super(instance, 23);
 	}
 
 	@Override

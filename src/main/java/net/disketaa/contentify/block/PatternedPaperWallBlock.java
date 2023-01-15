@@ -34,7 +34,7 @@ public class PatternedPaperWallBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public PatternedPaperWallBlock(ContentifyModElements instance) {
-		super(instance, 5);
+		super(instance, 11);
 	}
 
 	@Override

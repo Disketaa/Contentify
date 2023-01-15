@@ -31,7 +31,7 @@ public class BambooWallBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public BambooWallBlock(ContentifyModElements instance) {
-		super(instance, 6);
+		super(instance, 9);
 	}
 
 	@Override

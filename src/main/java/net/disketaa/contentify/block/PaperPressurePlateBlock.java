@@ -43,7 +43,7 @@ public class PaperPressurePlateBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public PaperPressurePlateBlock(ContentifyModElements instance) {
-		super(instance, 1);
+		super(instance, 16);
 	}
 
 	@Override

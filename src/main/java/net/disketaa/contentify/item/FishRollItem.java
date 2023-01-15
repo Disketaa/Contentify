@@ -18,7 +18,7 @@ public class FishRollItem extends ContentifyModElements.ModElement {
 	public static final Item block = null;
 
 	public FishRollItem(ContentifyModElements instance) {
-		super(instance, 28);
+		super(instance, 24);
 	}
 
 	@Override

@@ -43,7 +43,7 @@ public class PaperButtonBlock extends ContentifyModElements.ModElement {
 	public static final Block block = null;
 
 	public PaperButtonBlock(ContentifyModElements instance) {
-		super(instance, 2);
+		super(instance, 17);
 	}
 
 	@Override

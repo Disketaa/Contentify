@@ -17,7 +17,7 @@ public class RicePanicleItem extends ContentifyModElements.ModElement {
 	public static final Item block = null;
 
 	public RicePanicleItem(ContentifyModElements instance) {
-		super(instance, 23);
+		super(instance, 19);
 	}
 
 	@Override
