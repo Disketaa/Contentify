@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_withered_block": {
+    "has_withered_bone_block": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "contentify:withered_block"
+            "item": "contentify:withered_bone_block"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_withered_block",
+      "has_withered_bone_block",
       "has_the_recipe"
     ]
   ]

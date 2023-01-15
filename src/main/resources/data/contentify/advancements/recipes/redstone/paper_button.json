@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "contentify:redstone/bamboo_button"
+      "contentify:redstone/paper_button"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "contentify:redstone/bamboo_button"
+        "recipe": "contentify:redstone/paper_button"
       }
     }
   },

@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_rice_ball": {
+    "has_rice": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "contentify:rice_ball"
+            "item": "contentify:rice"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_rice_ball",
+      "has_rice",
       "has_the_recipe"
     ]
   ]

@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_dried_bamboo": {
+    "has_paper": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "contentify:dried_bamboo"
+            "item": "minecraft:paper"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_dried_bamboo",
+      "has_paper",
       "has_the_recipe"
     ]
   ]
