@@ -3,6 +3,7 @@ package net.disketaa.contentify.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.common.util.ForgeSoundType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -10,6 +11,8 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Direction;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
@@ -19,7 +22,6 @@ import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
@@ -60,8 +62,14 @@ public class PaperPressurePlateBlock extends ContentifyModElements.ModElement {
 
 	public static class CustomBlock extends PressurePlateBlock {
 		public CustomBlock() {
-			super(Sensitivity.MOBS, Block.Properties.create(Material.BAMBOO).sound(SoundType.SCAFFOLDING).hardnessAndResistance(0.15f, 0.5f)
-					.setLightLevel(s -> 0).notSolid().setOpaque((bs, br, bp) -> false));
+			super(Sensitivity.MOBS,
+					Block.Properties.create(Material.BAMBOO)
+							.sound(new ForgeSoundType(1.0f, 1.0f, () -> new SoundEvent(new ResourceLocation("contentify:block.paper.break")),
+									() -> new SoundEvent(new ResourceLocation("contentify:block.paper.step")),
+									() -> new SoundEvent(new ResourceLocation("contentify:block.paper.place")),
+									() -> new SoundEvent(new ResourceLocation("contentify:block.paper.hit")),
+									() -> new SoundEvent(new ResourceLocation("contentify:block.paper.fall"))))
+							.hardnessAndResistance(0.15f, 0.5f).setLightLevel(s -> 0).notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("paper_pressure_plate");
 		}
 

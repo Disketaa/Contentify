@@ -1,5 +1,5 @@
 {
-  "advancements.drink_alcohol.descr": "Выпейте саке",
+  "advancements.drink_alcohol.descr": "Выпейте алкогольный напиток",
   "subtitles.item.armor.hit.bone": "Потрескивания костяной брони",
   "block.contentify.paper_wall": "Бумажная стена",
   "block.contentify.withered_flower": "Иссушённый цветок",
@@ -19,8 +19,8 @@
   "item.modifiers.fullset": "§7Когда надет весь набор:",
   "gamerule.doMobFeathering.description": "Запрещает некоторым сущностям оставлять перья",
   "item.contentify.withered_bone_meal": "Иссушающая мука",
-  "item.contentify.bone_helmet": "Костяной шлем",
   "item.contentify.bone_chestplate": "Костяной нагрудник",
+  "item.contentify.bone_helmet": "Костяной шлем",
   "item.contentify.withered_bone": "Иссушённая кость",
   "item.contentify.withered_bone_leggings": "Иссушённые поножи",
   "block.contentify.bamboo_door": "Бамбуковая дверь",
